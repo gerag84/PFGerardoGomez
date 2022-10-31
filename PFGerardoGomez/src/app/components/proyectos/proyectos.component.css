@@ -1,13 +1,10 @@
 .row{
+    /*background-color: #30c977;*/
+    background: cornflowerblue;
     padding: 20px;
-    background-color: cornflowerblue;
 }
-.contenedor{
-    .parte1, .parte2{
-        display: inline-block;
-        text-align: justify;
-            }
-    .img-proyecto{
-        box-shadow: 10px 10px 30px #000000;
-    }
+div{
+    /*background-color: #30c977;*/
+    background: cornflowerblue;
 }
+
