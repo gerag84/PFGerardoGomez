@@ -16,45 +16,45 @@ import javax.validation.constraints.NotNull;
  */
 @Entity
 public class Proyectos {
- @Id
+    @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-    @NotNull
-    private String nombre;
-    @NotNull
-    private String apellido;
-    private String img;
+    private int id;
+    private String nombreP;
+    private String descripcionP;
+    
+    //Constructores
 
-    public Long getId() {
+    public Proyectos() {
+    }
+
+    public Proyectos(String nombreP, String descripcionP) {
+        this.nombreP = nombreP;
+        this.descripcionP = descripcionP;
+    }
+    
+    //Getters and setters
+
+    public int getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(int id) {
         this.id = id;
     }
 
-    public String getNombre() {
-        return nombre;
+    public String getNombreP() {
+        return nombreP;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public void setNombreP(String nombreP) {
+        this.nombreP = nombreP;
     }
 
-    public String getApellido() {
-        return apellido;
+    public String getDescripcionP() {
+        return descripcionP;
     }
 
-    public void setApellido(String apellido) {
-        this.apellido = apellido;
+    public void setDescripcionP(String descripcionP) {
+        this.descripcionP = descripcionP;
     }
-
-    public String getImg() {
-        return img;
-    }
-
-    public void setImg(String img) {
-        this.img = img;
-    }  
 }
-

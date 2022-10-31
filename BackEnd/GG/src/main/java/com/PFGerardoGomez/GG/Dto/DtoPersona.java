@@ -55,5 +55,5 @@ public class DtoPersona {
         this.img = img;
     }
 
-    
+   
 }

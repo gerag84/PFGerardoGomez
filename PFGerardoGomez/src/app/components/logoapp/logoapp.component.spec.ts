@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { LogoappComponent } from './logoapp.component';
+import { LogoArgProgComponent } from './logo-arg-prog.component';
 
-describe('LogoappComponent', () => {
-  let component: LogoappComponent;
-  let fixture: ComponentFixture<LogoappComponent>;
+describe('LogoArgProgComponent', () => {
+  let component: LogoArgProgComponent;
+  let fixture: ComponentFixture<LogoArgProgComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ LogoappComponent ]
+      declarations: [ LogoArgProgComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(LogoappComponent);
+    fixture = TestBed.createComponent(LogoArgProgComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
@@ -21,3 +21,4 @@ describe('LogoappComponent', () => {
     expect(component).toBeTruthy();
   });
 });
+

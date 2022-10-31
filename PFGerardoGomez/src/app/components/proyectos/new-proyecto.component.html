@@ -1,0 +1,37 @@
+<section class="vh-100 gradient-custom">
+    <div class="container py-0 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+                <div class="card bg-dark text-white" style="border-radius: 1rem;">
+                    <div class="card-body p-0 text-center">
+                        <div class="mb-md-5 mt-md-4 pb-5">
+                            <div class="container">
+                                <div class="row">
+                                    <div>
+                                        <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+                                            <div class="form-group">
+                                                <label for="nombreP">Nombre del proyecto</label>
+                                                <input type="text" class="form-control" id="nombreP" name="nombreP"
+                                                    [(ngModel)]="nombreP" required>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="descripcionP">Descripcion del proyecto</label>
+                                                <textarea type="text" class="form-control" id="descripcionP"
+                                                    maxLength="240" size="100" rows="10" name="descripcionP"
+                                                    [(ngModel)]="descripcionP" required>
+                                                </textarea>
+                                            </div>
+                                            <button class="btn btn-primary">
+                                                Agregar Proyecto
+                                            </button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

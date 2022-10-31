@@ -8,6 +8,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -40,13 +41,15 @@ public class CPersona {
     }
 
     //@PreAuthorize("hasRole('ADMIN')")
+    @PreAuthorize("hasRole('ADMIN')")
     @PostMapping("/crear")
     public String crearPersona(@RequestBody Persona persona) {
         sPersona.savePersona(persona);
         return "La persona fue creada correctamente";
     }
 
-    //@PreAuthorize("hasRole('ADMIN')")
+    //@PreAuthorize("hasRole('ADMIN')") este agregar en borrar y crear
+    @PreAuthorize("hasRole('ADMIN')")
     @DeleteMapping("/borrar/{id}")
     public String deletePersona(@PathVariable Long id) {
         sPersona.deletePersona(id);

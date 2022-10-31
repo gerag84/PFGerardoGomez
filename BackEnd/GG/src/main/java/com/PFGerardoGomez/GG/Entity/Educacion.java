@@ -10,42 +10,53 @@ import javax.validation.constraints.NotNull;
 public class Educacion {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-    @NotNull
-    private String nombre;
-    @NotNull
-    private String apellido;
-    private String img;
+    private int id;
+    private String nombreEd;
+    private String descripcionEd;
+    private String estadoEd;
+    
+    //Constructores
 
-    public Long getId() {
+    public Educacion() {
+    }
+
+    public Educacion(String nombreEd, String descripcionEd, String estadoEd) {
+        this.nombreEd = nombreEd;
+        this.descripcionEd = descripcionEd;
+        this.estadoEd = estadoEd;
+    }
+    
+    //Getters and setters
+
+    public int getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(int id) {
         this.id = id;
     }
 
-    public String getNombre() {
-        return nombre;
+    public String getNombreEd() {
+        return nombreEd;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public void setNombreEd(String nombreEd) {
+        this.nombreEd = nombreEd;
     }
 
-    public String getApellido() {
-        return apellido;
+    public String getDescripcionEd() {
+        return descripcionEd;
     }
 
-    public void setApellido(String apellido) {
-        this.apellido = apellido;
+    public void setDescripcionEd(String descripcionEd) {
+        this.descripcionEd = descripcionEd;
     }
-
-    public String getImg() {
-        return img;
+    
+    public String getEstadoEd(){
+        return estadoEd;
     }
-
-    public void setImg(String img) {
-        this.img = img;
-    }  
+    
+    public void setEstadoEd(String estadoEd){
+        this.estadoEd = estadoEd;
+    }
 }

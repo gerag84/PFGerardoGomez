@@ -10,10 +10,25 @@ import { BannerComponent } from './components/banner/banner.component';
 import { AcercadeComponent } from './components/acercade/acercade.component';
 import { ExperienciaComponent } from './components/experiencia/experiencia.component';
 import { EducacionComponent } from './components/educacion/educacion.component';
-import { NgCircleProgressModule } from 'ng-circle-progress';
-import { HysComponent } from './components/hys/hys.component';
-import { ProyectoComponent } from './components/proyecto/proyecto.component';
+import { NgCircleProgressModule} from 'ng-circle-progress';
+import { ProyectosComponent } from './components/proyectos/proyectos.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { HttpClientModule } from '@angular/common/http';
+import { HomeComponent } from './components/home/home.component';
+import { LoginComponent } from './components/login/login.component';
+import { FormsModule } from '@angular/forms';
+import { interceptorProvider } from './service/interceptor-service';
+import { NewExperienciaComponent } from './components/experiencia/new-experiencia.component';
+import { EditExperienciaComponent } from './components/experiencia/edit-experiencia.component';
+import { NewEducacionComponent} from './components/educacion/new-edcuacion.component';
+import { EditEducacionComponent } from './components/educacion/edit-educacion.component';
+import { SkillComponent } from './components/Skill/skill.component';
+import { EditSkillComponent } from './components/Skill/edit-skill.component';
+import { NewSkillComponent } from './components/Skill/new-skill.component';
+import { NewProyectoComponent } from './components/proyectos/new-proyecto.component';
+import { EditProyectoComponent } from './components/proyectos/edit-proyecto.component';
+import { EditPersonaComponent } from './components/acercade/edit-persona.component';
+
 
 @NgModule({
   declarations: [
@@ -25,17 +40,34 @@ import { FooterComponent } from './components/footer/footer.component';
     AcercadeComponent,
     ExperienciaComponent,
     EducacionComponent,
-    HysComponent,
-    ProyectoComponent,
-    FooterComponent
+    SkillComponent,
+    ProyectosComponent,
+    FooterComponent,
+    HomeComponent,
+    LoginComponent,
+    NewExperienciaComponent,
+    EditExperienciaComponent,
+    NewEducacionComponent,
+    EditEducacionComponent,
+    EditSkillComponent,
+    NewSkillComponent,
+    NewProyectoComponent,
+    EditProyectoComponent,
+    EditPersonaComponent
+   ,
+  
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgCircleProgressModule.forRoot({}),
-
+    HttpClientModule,
+    FormsModule
+  
   ],
-  providers: [],
+  providers: [
+    interceptorProvider
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

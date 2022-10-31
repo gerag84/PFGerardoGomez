@@ -1,4 +1,3 @@
-
 package com.PFGerardoGomez.GG.Repository;
 
 import com.PFGerardoGomez.GG.Entity.Persona;

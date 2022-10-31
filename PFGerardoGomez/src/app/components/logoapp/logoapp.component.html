@@ -1,1 +1,26 @@
-<img src="../../../assets/APLogo.png" id="logoapp">
+<div class="row">
+    <div class="container">
+        <div class="logo">
+            <a href="https://www.argentina.gob.ar/produccion/transformacion-digital-y-economia-del-conocimiento/argentina-programa"
+                target="_blank"><img src="../../../assets/APLogo.png" id="logoAP"></a>
+        </div>
+        <div class="redes">
+            <div>
+                
+                <a href="https://www.instagram.com/2ginformatica" target="_blank"><img src="../../../assets/instagram.png"
+                        id="instagram"></a>
+                <a href="https://www.facebook.com/gera.gomez.84" target="_blank"><img
+                        src="../../../assets/facebook.png" id="facebook"></a>
+                 <a href="https://twitter.com/geragomez84" target="_blank"><img src="../../../assets/twitter.png"
+                            id="twitter"></a>
+                <a href="https://github.com/gerag84" target="_blank"><img src="../../../assets/github.png"
+                        id="github"></a>
+                <!--<button type="button" class="btn btn-outline-light" (click)="login()">INGRESO</button>-->
+                <button type="button" class="btn btn-outline-light" (click)="login()" *ngIf="!isLogged">INGRESO</button>
+                <button type="button" class="btn btn-outline-light" (click)="onLogOut()" *ngIf="isLogged">CERRAR
+                    SESION</button>
+
+            </div>
+        </div>
+    </div>
+</div>
